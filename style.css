@@ -1,0 +1,696 @@
+
+/* 1. GENERAL SETTINGS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #26352B;
+    line-height: 1.6;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+.section-padding {
+    padding: 70px 0;
+}
+
+.section-label {
+    color: #71951E;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 35px;
+}
+
+.section-heading h2 {
+    color: #073D2A;
+    font-size: 35px;
+}
+
+.section-heading h2 span {
+    color: #71951E;
+}
+
+.section-heading p {
+    color: #68736B;
+    font-size: 14px;
+}
+
+
+/* 2. NAVIGATION */
+
+.header {
+    background: #073D2A;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    min-height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.brand-lockup {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 50%;
+    padding: 2px;
+    overflow: hidden;
+}
+
+.logo img {
+    height: 100%;
+    object-fit: contain;
+}
+
+.brand-name {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.brand-go {
+    color: #F4BE38;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 12px;
+}
+
+.nav-links a:hover {
+    color: #F4BE38;
+}
+
+.nav-button {
+    background: #F4BE38;
+    color: #073D2A;
+    padding: 10px 15px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+
+/* 3. HOME SECTION */
+
+.hero {
+    min-height: 600px;
+    background: linear-gradient(120deg, #073D2A, #71951E);
+    color: white;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.hero-content {
+    padding-top: 70px;
+    padding-bottom: 100px;
+}
+
+.hero-label {
+    color: #F4BE38;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: 65px;
+    line-height: 1.2;
+    margin: 15px 0;
+}
+
+.hero h1 span {
+    color: #F4BE38;
+}
+
+.hero-content > p {
+    max-width: 550px;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.btn-yellow {
+    background: #F4BE38;
+    color: #073D2A;
+}
+
+.btn-outline {
+    border: 1px solid white;
+    color: white;
+}
+
+.btn-yellow:hover {
+    background: #EDDA5E;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: #073D2A;
+}
+
+.hero-note {
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.status-dot {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #F4BE38;
+    margin-right: 7px;
+}
+
+.hero-bottom {
+    position: absolute;
+    bottom: 15px;
+    left: 5%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+}
+
+
+/* 4. INTRODUCTION */
+
+.introduction,
+.about,
+.how-it-works,
+.contact {
+    background: #F8F3E6;
+}
+
+.intro-grid,
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+}
+
+.intro-grid h2,
+.about-content h2 {
+    color: #073D2A;
+    font-size: 35px;
+}
+
+.intro-grid h2 span,
+.about-content h2 span {
+    color: #71951E;
+}
+
+.intro-description p,
+.about-content > p {
+    color: #68736B;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.text-link {
+    color: #71951E;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+
+/* 5. PROMOTIONAL VIDEO */
+
+.promo-video-card {
+    max-width: 900px;
+    margin: auto;
+    padding: 8px;
+    background: white;
+    border-radius: 12px;
+}
+
+.promo-video {
+    width: 100%;
+    display: block;
+    aspect-ratio: 16 / 9;
+    background: black;
+    border-radius: 8px;
+}
+
+.promo-video-caption {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 12px;
+    color: #68736B;
+}
+
+
+/* 6. PROTOTYPE */
+
+.prototype-grid,
+.features-grid,
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.prototype-card,
+.feature-card,
+.team-card {
+    border: 1px solid #E5EAE5;
+    border-radius: 12px;
+    overflow: hidden;
+    background: white;
+    text-align: center;
+}
+
+.prototype-card:hover,
+.feature-card:hover,
+.team-card:hover {
+    transform: translateY(-4px);
+}
+
+.prototype-image {
+    height: 220px;
+    background: #F8F3E6;
+}
+
+.prototype-image img {
+    height: 100%;
+    object-fit: contain;
+}
+
+.prototype-info {
+    padding: 20px;
+    text-align: left;
+}
+
+.card-tag {
+    color: #71951E;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.prototype-info h3 {
+    color: #073D2A;
+    margin: 8px 0;
+}
+
+.prototype-info p {
+    color: #68736B;
+    font-size: 13px;
+}
+
+
+/* 7. ABOUT US */
+
+.about-image {
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.about-image img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-caption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    color: white;
+    background: linear-gradient(transparent, black);
+    display: flex;
+    flex-direction: column;
+}
+
+.about-points {
+    display: grid;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.about-points > div {
+    display: flex;
+    gap: 12px;
+}
+
+.point-icon {
+    background: #F4BE38;
+    color: #073D2A;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    flex-shrink: 0;
+    font-weight: bold;
+}
+
+.about-points h3 {
+    color: #073D2A;
+    font-size: 15px;
+}
+
+.about-points p {
+    color: #68736B;
+    font-size: 12px;
+}
+
+
+/* 8. FEATURES */
+
+.feature-card {
+    padding: 25px 15px;
+}
+
+.feature-icon {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.feature-card h3 {
+    color: #073D2A;
+    font-size: 17px;
+}
+
+.feature-card p {
+    color: #68736B;
+    font-size: 13px;
+}
+
+
+/* 9. HOW IT WORKS */
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.step-card {
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.step-number {
+    color: #F4BE38;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.step-icon {
+    font-size: 32px;
+    margin: 10px 0;
+}
+
+.step-card h3 {
+    color: #073D2A;
+    font-size: 15px;
+}
+
+.step-card p {
+    color: #68736B;
+    font-size: 12px;
+}
+
+
+/* 10. OUR TEAM */
+
+.team-card {
+    padding: 20px;
+}
+
+.team-photo {
+    width: 160px;
+    height: 160px;
+    margin: auto auto 15px;
+    border: 5px solid #F4BE38;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.team-photo img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-card h3 {
+    color: #073D2A;
+}
+
+.team-card span {
+    color: #71951E;
+    font-size: 12px;
+}
+
+
+/* 11. CALL TO ACTION */
+
+.cta {
+    padding: 70px 0;
+    background: #073D2A;
+    color: white;
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 40px;
+    margin: 10px 0;
+}
+
+.cta h2 span {
+    color: #F4BE38;
+}
+
+.cta p {
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+.cta .section-label {
+    color: #F4BE38;
+}
+
+
+/* 12. CONTACT */
+
+.contact-content {
+    max-width: 600px;
+    margin: auto;
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.contact-content p {
+    margin: 8px;
+    font-size: 14px;
+}
+
+
+/* 13. FOOTER */
+
+.footer {
+    background: #052F21;
+    color: white;
+    padding-top: 40px;
+}
+
+.footer-status {
+    max-width: 500px;
+    padding-bottom: 30px;
+}
+
+.footer-status p {
+    color: #C4D2C8;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.footer-bottom {
+    padding: 15px 5%;
+    border-top: 1px solid #456052;
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #C4D2C8;
+}
+
+
+/* 14. TABLET */
+
+@media (max-width: 900px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 15px 5%;
+        background: #073D2A;
+        flex-direction: column;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .intro-grid,
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .prototype-grid,
+    .features-grid,
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+}
+
+
+/* 15. MOBILE */
+
+@media (max-width: 600px) {
+
+    .section-padding {
+        padding: 50px 0;
+    }
+
+    .hero {
+        min-height: 550px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        max-width: 250px;
+    }
+
+    .hero-buttons a {
+        text-align: center;
+    }
+
+    .hero-bottom {
+        font-size: 8px;
+        gap: 10px;
+    }
+
+    .prototype-grid,
+    .features-grid,
+    .team-grid,
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .intro-grid h2,
+    .about-content h2 {
+        font-size: 29px;
+    }
+
+    .about-image {
+        height: 280px;
+    }
+
+    .cta h2 {
+        font-size: 30px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
+}
